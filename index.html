@@ -1,734 +1,819 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>HealthEdPro</title>
-      <style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HealthEdPro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+            --primary-color: #ffcf1a;
+            --text-color: rgb(0, 2, 4);
+            --hover-color: #ffd700;
+        }
+
         * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
-          margin: 0px;
-          padding: 0px;
+            margin: 0;
+            padding: 0;
         }
 
         .navbar {
-          height: 12%;
-          display: flex;
-          align-items: center;
-          padding: 12px 25px;
-          align-items: center;
-          background-color: #ffcf1a;
-          position: sticky; 
-          top: 0;
-          z-index: 1000;
-          box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
         }
 
-
         .logo {
-          width: 80px;
-          cursor: pointer;
-          border-radius: 50%;
-          margin-right: 15px;
+            width: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-right: 15px;
         }
 
         .logo-container {
-          position: relative;
-          display: inline-block;
+            display: inline-block;
         }
 
         .logo-title {
-          font-size: 24px;
-          font-weight: bold;
-          margin-bottom: 10%;
-          line-height: 1;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1;
         }
 
         .logo-subtitle {
-          text-align: center;
-          position: absolute;
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          right: 0;
-          font-size: 16px;
-          line-height: 1;
-          margin: 0;
-        }
-
-        .Home {
-          width: 30px;
-          cursor: pointer;
-        }
-
-        .Emergency {
-          width: 30px;
-          cursor: pointer;
-          margin-left: 40px;
-        }
-
-        .community {
-          width: 30px;
-          cursor: pointer;
-          margin-left: 40px;
-        }
-
-        .other1 {
-          width: 5px;
-          cursor: pointer;
-          margin-right: 10px;
-          margin-left: 10px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1;
+            margin: 0;
         }
 
         nav {
-          flex: 1;
-          text-align: right;
-          width: 50%;
+            flex: 1;
+            text-align: right;
+            width: 50%; 
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
         nav ul li {
-          list-style: none;
-          display: inline-block;
-
-          margin-right: 40px;
+            margin-right: 40px;
+            display: flex;
+            align-items: center;
         }
 
         nav ul li a {
-          text-decoration: none;
-          color: rgb(0, 2, 4);
-          font-size: 16px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
         }
 
-        .container1 {
-          padding: 4rem;
+        nav ul li a i {
+            margin-right: 8px; 
         }
-
-        .slider-wrapper {
-          position: relative;
-          max-width: 48rem;
-          margin: 0 auto;
-        }
-
-        .slider {
-          width: 100%;
-          display: flex;
-          aspect-ratio: 16/9;
-          overflow: hidden;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-          box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-          border-radius: 0.5rem;
-        }
-
-        .slider img {
-          flex: 1 0 100%;
-          scroll-snap-type: start;
-          object-fit: cover;
-          animation: slide 16s infinite;
-        }
-
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-
-          25% {
-            transform: translateX(0);
-          }
-
-          30% {
-            transform: translateX(-100%);
-          }
-
-          50% {
-            transform: translateX(-200%);
-          }
-
-          55% {
-            transform: translateX(-200%);
-          }
-
-          75% {
-            transform: translateX(-200%);
-          }
-
-          80% {
-            transform: translateX(-300%);
-          }
-
-          100% {
-            transform: translateX(-300%);
-          }
-        }
-
-        .slider-nav {
-          width: 100%;
-          display: flex;
-          column-gap: 1rem;
-          position: absolute;
-          bottom: 1.25rem;
-          left: 50%;
-          transform: translateX(-50%, -50%);
-          z-index: 1;
-        }
-
-        .slider-nav a {
-          width: 0.5rem;
-          height: 0.5rem;
-          border-radius: 50%;
-          background-color: #fff;
-          opacity: 0.75;
-          transition: opacity ease 250ms;
-        }
-
-        .slider-nav a:hover {
-          opacity: 1;
-        }
-
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
-
-        .pg-footer {
-          font-family: 'Roboto', sans-serif;
-        }
-
-
-        .footer {
-          background-color: #ffcf1a;
-          color: black;
-        }
-
-        .footer-wave-svg {
-          background-color: transparent;
-          display: block;
-          height: 30px;
-          position: relative;
-          top: -1px;
-          width: 100%;
-        }
-
-        .footer-wave-path {
-          fill: #fffff2;
-        }
-
-        .footer-content {
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 1230px;
-          padding: 40px 15px 450px;
-          position: relative;
-        }
-
-        .footer-content-column {
-          box-sizing: border-box;
-          float: left;
-          padding-left: 15px;
-          padding-right: 15px;
-          width: 100%;
-          color: black;
-        }
-
-        .footer-content-column ul li a {
-          color: black;
-          text-decoration: none;
-        }
-
-        .footer-logo-link {
-          display: inline-block;
-        }
-
-        .footer-menu {
-          margin-top: 30px;
-        }
-
-        .footer-menu-name {
-          color: black;
-          font-size: 15px;
-          font-weight: 900;
-          letter-spacing: .1em;
-          line-height: 18px;
-          margin-bottom: 0;
-          margin-top: 0;
-          text-transform: uppercase;
-        }
-
-        .footer-menu-list {
-          list-style: none;
-          margin-bottom: 0;
-          margin-top: 10px;
-          padding-left: 0;
-        }
-
-        .footer-menu-list li {
-          margin-top: 5px;
-        }
-
-        .footer-call-to-action-description {
-          color: black;
-          margin-top: 10px;
-          margin-bottom: 20px;
-        }
-
-        .footer-call-to-action-button:hover {
-          background-color: black;
-          color: #fff017;
-        }
-
-        .button:last-of-type {
-          margin-right: 0;
-        }
-
-        .footer-call-to-action-button {
-          background-color: orange;
-          border-radius: 21px;
-          color: black;
-          display: inline-block;
-          font-size: 11px;
-          font-weight: 900;
-          letter-spacing: .1em;
-          line-height: 18px;
-          padding: 12px 30px;
-          margin: 0 10px 10px 0;
-          text-decoration: none;
-          text-transform: uppercase;
-          transition: background-color .2s;
-          cursor: pointer;
-          position: relative;
-        }
-
-        .footer-call-to-action {
-          margin-top: 30px;
-        }
-
-        .footer-call-to-action-title {
-          color: black;
-          font-size: 14px;
-          font-weight: 900;
-          letter-spacing: .1em;
-          line-height: 18px;
-          margin-bottom: 0;
-          margin-top: 0;
-          text-transform: uppercase;
-        }
-
-        .footer-call-to-action-link-wrapper {
-          margin-bottom: 0;
-          margin-top: 10px;
-          color: black;
-          text-decoration: none;
-        }
-
-        .footer-call-to-action-link-wrapper a {
-          color: black;
-          text-decoration: none;
-        }
-
-
-        .footer-social-links {
-          bottom: 0;
-          height: 54px;
-          position: absolute;
-          right: 0;
-          width: 236px;
-        }
-
-        .footer-social-amoeba-svg {
-          height: 54px;
-          left: 0;
-          display: block;
-          position: absolute;
-          top: 0;
-          width: 236px;
-        }
-
-        .footer-social-amoeba-path {
-          fill: #fff017;
-        }
-
-        .footer-social-link.linkedin {
-          height: 26px;
-          left: 3px;
-          top: 11px;
-          width: 26px;
-        }
-
-        .footer-social-link {
-          display: block;
-          padding: 10px;
-          position: absolute;
-        }
-
-        .hidden-link-text {
-          position: absolute;
-          clip: rect(1px 1px 1px 1px);
-          clip: rect(1px, 1px, 1px, 1px);
-          -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-          clip-path: inset(0px 0px 99.9% 99.9%);
-          overflow: hidden;
-          height: 1px;
-          width: 1px;
-          padding: 0;
-          border: 0;
-          top: 50%;
-        }
-
-        .footer-social-icon-svg {
-          display: block;
-          width: 25px;
-        }
-
-        .footer-social-icon-path {
-          fill: black;
-          transition: fill .2s;
-        }
-
-        .footer-social-link.twitter {
-          height: 28px;
-          left: 62px;
-          top: 3px;
-          width: 28px;
-        }
-
-        .footer-social-link.youtube {
-          height: 24px;
-          left: 123px;
-          top: 12px;
-          width: 24px;
-        }
-
-        .footer-social-link.github {
-          height: 34px;
-          left: 172px;
-          top: 7px;
-          width: 34px;
-        }
-
-        .footer-copyright {
-          background-color: #fff017;
-          color: black;
-          padding: 15px 30px;
-          text-align: center;
-        }
-
-        .footer-copyright-wrapper {
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 1200px;
-        }
-
-        .footer-copyright-text {
-          color: black;
-          font-size: 13px;
-          font-weight: 400;
-          line-height: 18px;
-          margin-bottom: 0;
-          margin-top: 0;
-        }
-
-        .footer-copyright-link {
-          color: black;
-          text-decoration: none;
-        }
-
-        /* Media Query For different screens */
-        @media (min-width:320px) and (max-width:479px) {
-
-          /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
-          .footer-content {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1230px;
-            padding: 40px 15px 1050px;
-            position: relative;
-          }
-        }
-
-        @media (min-width:480px) and (max-width:599px) {
-
-          /* smartphones, Android phones, landscape iPhone */
-          .footer-content {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1230px;
-            padding: 40px 15px 1050px;
-            position: relative;
-          }
-        }
-
-        @media (min-width:600px) and (max-width: 800px) {
-
-          /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-          .footer-content {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1230px;
-            padding: 40px 15px 1050px;
-            position: relative;
-          }
-        }
-
-        @media (min-width:801px) {
-          /* tablet, landscape iPad, lo-res laptops ands desktops */
-
-        }
-
-        @media (min-width:1025px) {
-          /* big landscape tablets, laptops, and desktops */
-
-        }
-
-        @media (min-width:1281px) {
-          /* hi-res laptops and desktops */
-
-        }
-
-
-
-
-        @media (min-width: 760px) {
-          .footer-content {
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1230px;
-            padding: 40px 15px 450px;
-            position: relative;
-          }
-
-          .footer-wave-svg {
-            height: 50px;
-          }
-
-          .footer-content-column {
-            width: 24.99%;
-          }
-        }
-
-        @media (min-width: 568px) {
-          /* .footer-content-column {
-            width: 49.99%;
-        } */
-        }
-
-        .footer-logo {
-          width: 100px;
-          cursor: pointer;
-          border-radius: 50%;
-        }
-
-        .container2 {
-          margin: 20px 0;
-          padding: 2rem;
-          height: 30%;
-          position: relative;
-        }
-
-        .assess-button {
-          background-color: #ffcf1a;
-          transition-duration: 0.4s;
-          border: none;
-          color: black;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 27px;
-          border-radius: 7px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          display: flex;
-          cursor: pointer;
-        }
-
-
-        .assess-button:hover {
-          box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-          background-color: black;
-          color: #ffcf1a;
-        }
-
-        .assess-button-text {
-          margin-top: 10px;
-          font-size: 18px;
-          color: #333;
-          text-align: center;
-          line-height: 1.5;
-        }
-
-        .ass-but-div {
-          box-sizing: content-box;
-          height: 100px;
-          margin-bottom: 40px;
-          margin-top: 40px;
-        }
-
-        .bot {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .bot1 {
-          flex: 1;
-          padding-right: 20px;
-        }
-
-        .bot2 {
-          flex: 1;
-          display: flex;
-          justify-content: flex-end;
-        }
-
-        .container3 {
-          padding: 20px;
-          text-align: center;
-          background-color: #fff017;
-        }
-
-        .desc {
-          font-size: 3em;
-          margin-bottom: 20px;
-          font-family: 'Pacifico';
-        }
-
-        .colorful-heading {
-          color: rgb(35, 18, 24);
-          font-family: 'Pacifico';
-          margin: 20px 0;
-        }
-
-        .colorful-text {
-          font-size: 1.2em;
-          line-height: 1.5;
-          color: #150d0d;
-          margin: 20px 0;
-        }
-
-        .highlight {
-          color: #4CAF50;
-          font-weight: bold;
-          text-decoration: underline;
-        }
-
-        .botimg {
-          max-width: 80%;
-          height: auto;
-          display: block;
-          margin: 20px auto;
-        }
-
-        .oval-button {
-          display: inline-block;
-          padding: 10px 20px;
-          background-color: black;
-          color: white;
-          border-radius: 25px;
-          text-decoration: none;
-          font-size: 1em;
-          margin-top: 15px;
-          transition: background-color 0.3s, transform 0.3s;
-        }
-
-    /* Hamburger Menu */
 
         .menu-toggle {
-                top: 30px;
-                right: 20px;
-                background: #ffcf1a;
-                border: 1px solid #000;
-                color: black;
-                font-size: 1.2rem;
-                cursor: pointer;
-                padding: 0.5rem;
-                z-index: 101;
-                border-radius: 4px;
+    display: block; 
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    background: var(--hover-color); /* Background color */
+    border: none;
+    color: black; /* Text color */
+    position: relative; /* To position the pseudo-elements */
+    padding: 10px 15px; /* Add some padding */
+    border-radius: 50%; /* Make it circular */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 207, 26, 0.6); /* Gentle hover background */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.menu-toggle:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 207, 26, 0.5); /* Add a subtle shadow on focus */
+}
+
+.menu-toggle i {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and rotation transition */
+}
+
+.mobile-nav.show + .menu-toggle i {
+    transform: rotate(90deg); /* Rotate icon when menu is open */
+}
+
+.mobile-nav {
+    display: none; 
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 50px; /* Adjust to position below the navbar */
+    right: -250px; /* Initially position it off-screen */
+    width: 250px; /* Set a fixed width for the mobile nav */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease; /* Smooth sliding transition */
+}
+
+.mobile-nav.show {
+    display: block; /* Show the mobile nav when the 'show' class is added */
+    right: 0; /* Slide in from the right */
+}
+
+.mobile-nav ul {
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    width: 100%; /* Make list items take full width */
+}
+
+.mobile-nav ul li a {
+    display: block; /* Make the entire area clickable */
+    padding: 15px 20px; /* Add padding for a larger clickable area */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color); /* Text color */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle bottom border */
+}
+
+.mobile-nav ul li a:hover {
+    background-color: var(--hover-color); /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.mobile-nav ul li:last-child a {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+        @media (max-width: 768px) {
+            nav {
+                display: none; 
             }
 
-            .menu {
-                position: fixed;
-                top: 0;
-                right: -250px;
-                height: 100vh;
-                width: 250px;
-                background-color: #ffcf1a;
-                padding: 1rem;
-                transition: right 0.3s ease;
-                list-style: none;
-                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            .menu-toggle {
+                display: block; 
             }
 
-            .menu.show {
-                right: 0;
+            .mobile-nav {
+                display: none; 
             }
 
-            .menu li {
-                margin: 1rem 0;
-                border-bottom: 1px solid #ffcf1a;
+            .mobile-nav.show {
+                display: block; 
             }
+        }
 
-            .menu a {
-                color: black;
-                text-decoration: none;
-                font-size: 1.1rem;
-                display: block;
-                padding: 0.5rem;
-                transition: background-color 0.2s;
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: block; 
             }
+        }
 
-            .menu a:hover {
-                background-color: #f5f5f5;
-                border-radius: 4px;
-            }
 
-            /* Hamburger menu*/
-      </style>
-    </head>
 
-    <body>
 
-      <div class="navbar">
-        <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png"
-          alt="Logo" class="logo">
-        <div class="logo-container">
-          <h1 class="logo-title"> HealthEdPro </h1>
-          <h2 class="logo-subtitle">Selfcare</h2>
-        </div>
 
-        <nav>
-          <ul>
-            <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro.html">Login</a></li>
 
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR4nO3WPWsUURTG8Z+xWV8LhVRK0GhhvVroNxAMGKxTZit7e0HwKwRfKrG1ErGxsFJZfKsFlVhqiIJoEHflyhGWZSaTWe/upJg/nCnO3HvuM2fOPfeSl33o2KWcxQd8wgW7jKvYwuewrfA1Tgd3MMRLnMAxPAvffRxoStwpvAkht8ZqrxO+9O4tTo+8647ZmWmIu4QN/MTqNuNW8B3fcCV8wzHr5xS2FzcwwPvIQBXdGDuIuUnUU/TwMafAo3gcCzzBfI25R/BoJGtr4e/nEnguvjZl4TrmJogxF3NTjPWImUVgL2ptI2ovZ/1u/o/AtBPvxi95jUX5WIyYKfa7SU6f43geAe5hv/x0cDvWeIWTO514EV/wC9dMn16cPF9xebuBe0LQ7zhPz5sd3ZFWdLNoE6Y28DDSvV6zheRiPtYehpak6S+Ho1CT+h+5O3tN+qFhEJoOiccDLOdsnBPyb/3l0HSwbEBT9KvWbwXOMoMLBXe7MktjZy4w3UiGO7S1JgX2KqxxgVW0AstoM1hEW4MVtLu4iLbNlNG2mSLaNlNBZYJe1LhCTcuShlKWovibtKWqNLeowR9WphA2i8ozeAAAAABJRU5ErkJggg=="
-              class="Home">
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjklEQVR4nO2YTYhNYRjHf+MzwywojIbxFWVEU7fMrMZGTYqSfDRWY2EQpbGUDbJASbK5xWqw8ZFmwY66oSgiY7LTlBAiZHzP1aP/1e2OM/d8POfMZn711j3v+z7/8++973ne5xwIzzrgFdBIfOYDb4C1pMBKYAjIJ9DIS2MFKXEV+AEsjBHbCHwHrpAizQlWMa9Y00iVS8CTGHF9ik2dCUBdjLg6xY6ROQ3AlAR5rQ1YE9BWAdNiatcCTfbjE/Aa6FZnGDYCj4FiiFZKLU0RjHXL02/r2AD0S8xOij1VBE5o7gvgKLAN2BzQdgAXgV/AV2BLFe298lCUp02lgXFAhzotEU8PENip4F5gKuFpVpr5CbQGzJmhe/fLi3kahnXWj7D074CnMfdVA/AeuD/CnPogY2H3na3e1rgCwBFpLCMFjkt8VgKNNml0klKh8DGhxhwZPEwKPAIeJtSoAb4A50kBW73LDjp9wF2cmam/xvZhUnqVhF1pkcHdDlqnpBWnIgqkQ6LtDlr7pGWvEJGfsNPAbWBSxdgBiS51MLheWnbElmMFyz15MC//mA2cBAYVaOlkfEXwWZ2nkx0MLtd99lf0WzF7TWOD8mTe+KDOG9pr/+MmMIAPtXo3ORMw3iIvRR2Nfzd+0AFe4jlwCz9eAterzGkN+1BO1N97Dj/uAM+8xJZouQ96CQI9wLcklUs57TJohakXh6Q5z0Nsl8Sq7dModEpzNQ4ccyizgsqu7ThgXwM+48tcGbQCNjEP9AbnSY1eoi7EFVgM5NQskRfKrr3agGrM0vWCsOYWKdMXM25DYU3mFGC5qiuj1qN75qIYtMCs6BozOBorWNBn2yxaIYpBOzHejsJTbPccdlr9AROb/U7onGYSAAAAAElFTkSuQmCC"
-                class="Emergency">
-            </a>
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAADM0lEQVR4nO2XWUhVURSGv9S0OQNtkGYQlRAq6yUoCiMooh56iSLoSSuCBilogAaKgoIUi4LIQkFsQDIpKCMwemimieaCXqK5SJosu7HlP3HUe849g90K7g+by9lrrb3/u/Zew4YEEvj/0B3IAfKAXvwjyAI2A0+BiG18B+qAYX+T3ETgvQhdB3YBK4DlQBXwTfIyYFC8yfUFngOvgUIHnenAeaAFeAwMjifBrfLcNA+6M4AfwEHiiNvATR/6tcAXoCtxgNnkJ7DHh80yeTyfOCBDm23xYbNQNhPazQ8AVgI1wAXguLJCqKDqrc12+rBZKpvRtrk5QJPmTbTfAV7q+xWwHugRlOQnoNqHfpmuRbq+zVE3A/eByUAXm+5s4J6INgIpQQheAe760L8KPLB9HwM+A8NdbNaK5IIgBM8ov1kecUM/pZlztrkPwIkYdqk6KZP0faGbyB0BkjzoJ8ljLbLtKc+UerB9AjT4JZimMlbhw+aQbNLkGUNwtwe7N4ps32hQBBZ70F0k3dO2uRdAvYdyarxeHoRgnjYx0RYLD6VrbCxc1JwbZsrTiwmITUodpgd0Qp422WibS1Y7djLGHR4pD+4LSjBHC5gq4ITD0rH/CUPqq+qzG/rLAYGO2EKFPBTNizmSHYgiO6rNVzmsa6L9luyd2jlPKNYiBVFkBZIVOdTzRxr2KmJhqmy3hSEXhqBBieRT6IgapSXzRwIjRenG3LHsKPJsyc469IHjXP6AKY3XwpAboQQaUTQ7YYN06hWVdkySbH4Uu0aPKawNkvTOqJNnzCXf4XCHLBjZdumatJL5WwJ7RXAUHVGq+j0ej5ilFj+iAr4fGOPVGBio3z7AEj0ZIi4tW5Z6xGZFfKGTI0y4V9qayNXqTvwiVe3TO631DFij9d2SfJVyprG5rN6xDWolrFAXEgTpaufNOpfUkJpq4hUmktcBb3Xs5t3dirla1DzIw6Bad7Akxn3FQ2Wx3tmtnjwl1qZFCoohImfubGcgQ3eztRNqUmAUBRzJwDydQnmIddqPG8BHdEEjIUY+MFTBFenkUWnlvVyVrCAj0/ZMHRtinfYj1+NTI4EE+JP4BR2TAbz3fmsNAAAAAElFTkSuQmCC"
-              class="community">
-            </a>
-            <!-- Hamburger Menu--> 
-            <img
-              src=""
-              class="other1">
-          </ul>
-        </nav>
-        <button class="menu-toggle " onclick="toggleMenu()">☰</button> 
-        <ul class="menu">
+    .container1 {
+      padding: 2rem;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .slider {
+      width: 100%;
+      display: flex;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+      border-radius: 0.5rem;
+    }
+
+    .slider img {
+      flex: 1 0 100%;
+      scroll-snap-type: start;
+      object-fit: cover;
+      animation: slide 16s infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(0);
+      }
+
+      30% {
+        transform: translateX(-100%);
+      }
+
+      50% {
+        transform: translateX(-200%);
+      }
+
+      55% {
+        transform: translateX(-200%);
+      }
+
+      75% {
+        transform: translateX(-200%);
+      }
+
+      80% {
+        transform: translateX(-300%);
+      }
+
+      100% {
+        transform: translateX(-300%);
+      }
+    }
+
+    .slider-nav {
+      width: 100%;
+      display: flex;
+      column-gap: 1rem;
+      position: absolute;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX( -50%);
+      z-index: 1;
+    }
+
+    .slider-nav a {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background-color: #fff;
+      opacity: 0.75;
+      transition: opacity ease 250ms;
+    }
+
+    .slider-nav a:hover {
+      opacity: 1;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .pg-footer {
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .footer {
+      background-color: #ffcf1a;
+      color: black;
+    }
+
+    .footer-wave-svg {
+      background-color: transparent;
+      display: block;
+      height: 30px;
+      position: relative;
+      top: -1px;
+      width: 100%;
+    }
+
+    .footer-wave-path {
+      fill: #fffff2;
+    }
+
+    .footer-content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1230px;
+      padding: 40px 15px 450px;
+      position: relative;
+    }
+
+    .footer-content-column {
+      box-sizing: border-box;
+      float: left;
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 100%;
+      color: black;
+    }
+
+    .footer-content-column ul li a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .footer-logo-link {
+      display: inline-block;
+    }
+
+    .footer-menu {
+      margin-top: 30px;
+    }
+
+    .footer-menu-name {
+      color: black;
+      font-size: 15px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    .footer-menu-list {
+      list-style: none;
+      margin-bottom: 0;
+      margin-top: 10px;
+      padding-left: 0;
+    }
+
+    .footer-menu-list li {
+      margin-top: 5px;
+    }
+
+    .footer-call-to-action-description {
+      color: black;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-call-to-action-button:hover {
+      background-color: black;
+      color: #fff017;
+    }
+
+    .button:last-of-type {
+      margin-right: 0;
+    }
+
+    .footer-call-to-action-button {
+      background-color: orange;
+      border-radius: 21px;
+      color: black;
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      padding: 12px 30px;
+      margin: 0 10px 10px 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .2s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .footer-call-to-action {
+      margin-top: 30px;
+    }
+
+    .footer-call-to-action-title {
+      color: black;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .1em;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    .footer-call-to-action-link-wrapper {
+      margin-bottom: 0;
+      margin-top: 10px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .footer-call-to-action-link-wrapper a {
+      color: black;
+      text-decoration: none;
+    }
+
+
+    .footer-social-links {
+      bottom: 0;
+      height: 54px;
+      position: absolute;
+      right: 0;
+      width: 236px;
+    }
+
+    .footer-social-amoeba-svg {
+      height: 54px;
+      left: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 236px;
+    }
+
+    .footer-social-amoeba-path {
+      fill: #fff017;
+    }
+
+    .footer-social-link.linkedin {
+      height: 26px;
+      left: 3px;
+      top: 11px;
+      width: 26px;
+    }
+
+    .footer-social-link {
+      display: block;
+      padding: 10px;
+      position: absolute;
+    }
+
+    .hidden-link-text {
+      position: absolute;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+      clip-path: inset(0px 0px 99.9% 99.9%);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      padding: 0;
+      border: 0;
+      top: 50%;
+    }
+
+    .footer-social-icon-svg {
+      display: block;
+      width: 25px;
+    }
+
+    .footer-social-icon-path {
+      fill: black;
+      transition: fill .2s;
+    }
+
+    .footer-social-link.twitter {
+      height: 28px;
+      left: 62px;
+      top: 3px;
+      width: 28px;
+    }
+
+    .footer-social-link.youtube {
+      height: 24px;
+      left: 123px;
+      top: 12px;
+      width: 24px;
+    }
+
+    .footer-social-link.github {
+      height: 34px;
+      left: 172px;
+      top: 7px;
+      width: 34px;
+    }
+
+    .footer-copyright {
+      background-color: #fff017;
+      color: black;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    .footer-copyright-wrapper {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1200px;
+    }
+
+    .footer-copyright-text {
+      color: black;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .footer-copyright-link {
+      color: black;
+      text-decoration: none;
+    }
+
+    /* Media Query For different screens */
+    @media (min-width:320px) and (max-width:479px) {
+
+      /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+      .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+      }
+    }
+
+    @media (min-width:480px) and (max-width:599px) {
+
+      /* smartphones, Android phones, landscape iPhone */
+      .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+      }
+    }
+
+    @media (min-width:600px) and (max-width: 800px) {
+
+      /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+      .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 1050px;
+        position: relative;
+      }
+    }
+
+    @media (min-width:801px) {
+      /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+    }
+
+    @media (min-width:1025px) {
+      /* big landscape tablets, laptops, and desktops */
+
+    }
+
+    @media (min-width:1281px) {
+      /* hi-res laptops and desktops */
+
+    }
+
+
+
+
+    @media (min-width: 760px) {
+      .footer-content {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1230px;
+        padding: 40px 15px 450px;
+        position: relative;
+      }
+
+      .footer-wave-svg {
+        height: 50px;
+      }
+
+      .footer-content-column {
+        width: 24.99%;
+      }
+    }
+
+    @media (min-width: 568px) {
+      /* .footer-content-column {
+        width: 49.99%;
+    } */
+    }
+
+    .footer-logo {
+      width: 100px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .container2 {
+      margin: 20px 0;
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .assess-button {
+      background-color: #ffcf1a;
+      transition-duration: 0.4s;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 27px;
+      border-radius: 7px;
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .assess-button:hover {
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      background-color: black;
+      color: #ffcf1a;
+    }
+
+    .assess-button-text {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .ass-but-div {
+      box-sizing: content-box;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ass-but-text-div {
+      box-sizing: content-box;
+      margin-bottom: 40px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+    .assess-button {
+        font-size: 22px; /* Adjust font size for smaller screens */
+        padding: 12px 24px; /* Adjust padding for smaller screens */
+    }
+
+    .assess-button-text {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .assess-button {
+        font-size: 20px; /* Further adjust font size for very small screens */
+        padding: 10px 20px; /* Further adjust padding for very small screens */
+    }
+
+    .assess-button-text {
+        font-size: 14px; /* Further adjust font size for very small screens */
+    }
+}
+
+    .bot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bot1 {
+      flex: 1;
+      
+    }
+
+    .bot2 {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .container3 {
+      padding: 20px;
+      text-align: center;
+      background-color: #fff017;
+    }
+
+    .desc {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-family: 'Pacifico';
+    }
+
+    .colorful-heading {
+      color: rgb(35, 18, 24);
+      font-family: 'Pacifico';
+      margin: 20px 0;
+    }
+
+    .colorful-text {
+      font-size: 1.2em;
+      line-height: 1.5;
+      color: #150d0d;
+      margin: 20px 0;
+    }
+
+    .highlight {
+      color: #4CAF50;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .botimg {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .oval-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: black;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      margin-top: 15px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png" alt="Logo" class="logo">
+    <div class="logo-container">
+        <h1 class="logo-title"> HealthEdPro </h1>
+        <h2 class="logo-subtitle">Selfcare</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="https://healthedpro.github.io/Health-Ed-Pro/"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html"><i class="fas fa-exclamation-triangle"></i>Emergency</a></li>
+            <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html"><i class="fas fa-users"></i>Community</a></li>
+            <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+        </ul>
+    </nav>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars" id="hamburger-icon"></i>
+    </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
             <li><a href="https://healthedpro.github.io/Health-Ed-Pro/">Home</a></li>
             <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro">Login</a></li>
             <li><a href="https://healthedpro.github.io/Health-Ed-Pro/test.html">Assess Yourself</a></li>
@@ -738,225 +823,221 @@
             <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a></li>
             <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Review.html">Reviews</a></li>
         </ul>
-        <!-- Hamburger Menu-->
-      </div>
-      <section class="container1">
-        <div class="slider-wrapper">
-          <div class="slider">
-            <img id="slide1" src="https://wallpapercave.com/wp/wp4886359.jpg" alt="quote1">
-            <img id="slide2" src="https://wallpapercave.com/wp/wp4886335.jpg" alt="quote2">
-            <img id="slide3" src="https://wallpapercave.com/wp/wp4886360.jpg" alt="quote3">
-            <img img="slide4" src="https://wallpapercave.com/wp/wp4886333.jpg" alt="quote4">
-          </div>
-          <div class="slider-nav">
-            <a href="#slide1"></a>
-            <a href="#slide2"></a>
-            <a href="#slide3"></a>
-            <a href="#slide4"></a>
-          </div>
-        </div>
-      </section>
+    </div> 
 
-      <section class="container3">
-        <div class="bot">
-          <div class="bot1">
-            <h1 class="desc glowing">Description</h1>
-            <h2 class="colorful-heading">HealthEdPro: Your Mental Wellness Companion</h2>
-            <p class="colorful-text">Welcome to <span class="highlight">HealthEdPro</span>, a safe space for mental health
-              assessment and support. Our interactive self-assessment tools allow you to gain insights into your mental
-              well-being. Chat with our AI for personalized advice and find tailored solutions to recover faster. Your
-              journey to better mental health starts here.</p>
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/chatbot.html" class="oval-button">CLICK the image</a>
-            <p>To ask any query, click on the image or click on the button above! </p>
-          </div>
-          <div class="bot2">
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/chatbot.html" target="_blank">
-              <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/Picsart_24-10-17_15-35-33-193.png"
-                alt="bot" class="botimg">
+    <script src="indexscrpt.js"></script>
+
+  <section class="container1">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img id="slide1" src="https://wallpapercave.com/wp/wp4886359.jpg" alt="quote1">
+        <img id="slide2" src="https://wallpapercave.com/wp/wp4886335.jpg" alt="quote2">
+        <img id="slide3" src="https://wallpapercave.com/wp/wp4886360.jpg" alt="quote3">
+        <img img="slide4" src="https://wallpapercave.com/wp/wp4886333.jpg" alt="quote4">
+      </div>
+      <div class="slider-nav">
+        <a href="#slide1"></a>
+        <a href="#slide2"></a>
+        <a href="#slide3"></a>
+        <a href="#slide4"></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container3">
+    <div class="bot">
+      <div class="bot1">
+        <h1 class="desc glowing">Description</h1>
+        <h2 class="colorful-heading">HealthEdPro: Your Mental Wellness Companion</h2>
+        <p class="colorful-text">Welcome to <span class="highlight">HealthEdPro</span>, a safe space for mental health
+          assessment and support. Our interactive self-assessment tools allow you to gain insights into your mental
+          well-being. Chat with our AI for personalized advice and find tailored solutions to recover faster. Your
+          journey to better mental health starts here.</p>
+        <a href="https://healthedpro.github.io/Health-Ed-Pro/chatbot.html" class="oval-button">CLICK the image</a>
+        <p>To ask any query, click on the image or click on the button above! </p>
+      </div>
+      <div class="bot2">
+        <a href="https://healthedpro.github.io/Health-Ed-Pro/chatbot.html" target="_blank">
+          <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/Picsart_24-10-17_15-35-33-193.png"
+            alt="bot" class="botimg">
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container2">
+    <div class="ass-but-div">
+      <button class="assess-button">Assess Yourself</button>
+    </div>
+    <div class="ass-but-text-div">
+      <p class="assess-button-text">"Ready to take control of your mental wellness? Click 'Assess Yourself' to start
+        your personalized journey toward better mental health. Discover insights and actionable steps tailored just for
+        you. Let's begin the path to a healthier mind!"</p>
+    </div>
+  </section>
+
+  <!--Footer Section-->
+
+  <div class="pg-footer">
+    <footer class="footer">
+      <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
+        <path class="footer-wave-path"
+          d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z">
+        </path>
+      </svg>
+      <div class="footer-content">
+        <div class="footer-content-column">
+          <div class="footer-logo">
+            <a class="footer-logo-link" href="#">
+              <span class="hidden-link-text">LOGO</span>
+              <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png"
+                alt="Logo" class="footer-logo">
             </a>
           </div>
+          <div class="footer-menu">
+            <h2 class="footer-menu-name"> Activities</h2>
+            <ul id="menu-get-started" class="footer-menu-list">
+              <li class="menu-item menu-item-type-post_type menu-item-object-product">
+                <a href="#">Welfares</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-product">
+                <a href="#">Collaborations</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-product">
+                <a href="#">Seminars</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
+        <div class="footer-content-column">
+          <div class="footer-menu">
+            <h2 class="footer-menu-name"> Helpline No</h2>
+            <ul id="menu-company" class="footer-menu-list">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                    href="tel:1800-599-0019" target="_self"> 1800-599-0019 </a></p>
+              </li>
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                    href="tel:0124-64XXXX" target="_self"> 1-8008914416 </a></p>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                    href="tel:0124-64XXXX" target="_self"> 8376804102 </a></p>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <p class="footer-call-to-action-link-wrapper"> 9630899002 <a class="footer-call-to-action-link"
+                    href="tel:0124-64XXXX" target="_self"> </a></p>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                    href="tel:0124-64XXXX" target="_self"> 8322252525 </a></p>
+              </li>
 
-
-      <section class="container2">
-        <div class="ass-but-div">
-          <button class="assess-button">Assess Yourself</button>
+            </ul>
+          </div>
+          <div class="footer-menu">
+            <h2 class="footer-menu-name"> Terms and Conditions</h2>
+            <ul id="menu-legal" class="footer-menu-list">
+              <li
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="ass-but-text-div">
-          <p class="assess-button-text">"Ready to take control of your mental wellness? Click 'Assess Yourself' to start
-            your personalized journey toward better mental health. Discover insights and actionable steps tailored just for
-            you. Let's begin the path to a healthier mind!"</p>
+        <div class="footer-content-column">
+          <div class="footer-menu">
+            <h2 class="footer-menu-name"> Quick Links</h2>
+            <ul id="menu-quick-links" class="footer-menu-list">
+              <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                <a target="_blank" rel="noopener noreferrer" href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a>
+              </li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom">
+                <a target="_blank" rel="noopener noreferrer" href="#">Assess yourself</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
+                <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a>
+              </li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="#">Reviews</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </section>
-
-      <!--Footer Section-->
-
-      <div class="pg-footer">
-        <footer class="footer">
-          <svg class="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path class="footer-wave-path"
-              d="M851.8,100c125,0,288.3-45,348.2-64V0H0v44c3.7-1,7.3-1.9,11-2.9C80.7,22,151.7,10.8,223.5,6.3C276.7,2.9,330,4,383,9.8 c52.2,5.7,103.3,16.2,153.4,32.8C623.9,71.3,726.8,100,851.8,100z">
+        <div class="footer-content-column">
+          <div class="footer-call-to-action">
+            <h2 class="footer-call-to-action-title"> Let's Chat</h2>
+            <p class="footer-call-to-action-description"> Have a support question?</p>
+            <a class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
+          </div>
+          <div class="footer-call-to-action">
+            <h2 class="footer-call-to-action-title"> You Call Us</h2>
+            <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX"
+                target="_self"> 0124-64XXXX </a></p>
+          </div>
+        </div>
+        <div class="footer-social-links"> <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 236 54">
+            <path class="footer-social-amoeba-path"
+              d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
             </path>
           </svg>
-          <div class="footer-content">
-            <div class="footer-content-column">
-              <div class="footer-logo">
-                <a class="footer-logo-link" href="#">
-                  <span class="hidden-link-text">LOGO</span>
-                  <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png"
-                    alt="Logo" class="footer-logo">
-                </a>
-              </div>
-              <div class="footer-menu">
-                <h2 class="footer-menu-name"> Activities</h2>
-                <ul id="menu-get-started" class="footer-menu-list">
-                  <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                    <a href="#">Welfares</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                    <a href="#">Collaborations</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                    <a href="#">Seminars</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer-content-column">
-              <div class="footer-menu">
-                <h2 class="footer-menu-name"> Helpline No</h2>
-                <ul id="menu-company" class="footer-menu-list">
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
-                        href="tel:1800-599-0019" target="_self"> 1800-599-0019 </a></p>
-                  </li>
-                  <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                    <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
-                        href="tel:0124-64XXXX" target="_self"> 1-8008914416 </a></p>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
-                        href="tel:0124-64XXXX" target="_self"> 8376804102 </a></p>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <p class="footer-call-to-action-link-wrapper"> 9630899002 <a class="footer-call-to-action-link"
-                        href="tel:0124-64XXXX" target="_self"> </a></p>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
-                        href="tel:0124-64XXXX" target="_self"> 8322252525 </a></p>
-                  </li>
-
-                </ul>
-              </div>
-              <div class="footer-menu">
-                <h2 class="footer-menu-name"> Terms and Conditions</h2>
-                <ul id="menu-legal" class="footer-menu-list">
-                  <li
-                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="#">Terms of Use</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer-content-column">
-              <div class="footer-menu">
-                <h2 class="footer-menu-name"> Quick Links</h2>
-                <ul id="menu-quick-links" class="footer-menu-list">
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                    <a target="_blank" rel="noopener noreferrer" href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a>
-                  </li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                    <a target="_blank" rel="noopener noreferrer" href="#">Assess yourself</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                    <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a>
-                  </li>
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="#">Reviews</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer-content-column">
-              <div class="footer-call-to-action">
-                <h2 class="footer-call-to-action-title"> Let's Chat</h2>
-                <p class="footer-call-to-action-description"> Have a support question?</p>
-                <a class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
-              </div>
-              <div class="footer-call-to-action">
-                <h2 class="footer-call-to-action-title"> You Call Us</h2>
-                <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX"
-                    target="_self"> 0124-64XXXX </a></p>
-              </div>
-            </div>
-            <div class="footer-social-links"> <svg class="footer-social-amoeba-svg" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 236 54">
-                <path class="footer-social-amoeba-path"
-                  d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
-                </path>
-              </svg>
-              <a class="footer-social-link linkedin" href="#" target="_blank">
-                <span class="hidden-link-text">Linkedin</span>
-                <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                  <path class="footer-social-icon-path"
-                    d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z">
-                  </path>
-                </svg>
-              </a>
-              <a class="footer-social-link twitter" href="#" target="_blank">
-                <span class="hidden-link-text">Twitter</span>
-                <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
-                  <path class="footer-social-icon-path"
-                    d="M 25.855469 5.574219 C 24.914063 5.992188 23.902344 6.273438 22.839844 6.402344 C 23.921875 5.75 24.757813 4.722656 25.148438 3.496094 C 24.132813 4.097656 23.007813 4.535156 21.8125 4.769531 C 20.855469 3.75 19.492188 3.113281 17.980469 3.113281 C 15.082031 3.113281 12.730469 5.464844 12.730469 8.363281 C 12.730469 8.773438 12.777344 9.175781 12.867188 9.558594 C 8.503906 9.339844 4.636719 7.246094 2.046875 4.070313 C 1.59375 4.847656 1.335938 5.75 1.335938 6.714844 C 1.335938 8.535156 2.261719 10.140625 3.671875 11.082031 C 2.808594 11.054688 2 10.820313 1.292969 10.425781 C 1.292969 10.449219 1.292969 10.46875 1.292969 10.492188 C 1.292969 13.035156 3.101563 15.15625 5.503906 15.640625 C 5.0625 15.761719 4.601563 15.824219 4.121094 15.824219 C 3.78125 15.824219 3.453125 15.792969 3.132813 15.730469 C 3.800781 17.8125 5.738281 19.335938 8.035156 19.375 C 6.242188 20.785156 3.976563 21.621094 1.515625 21.621094 C 1.089844 21.621094 0.675781 21.597656 0.265625 21.550781 C 2.585938 23.039063 5.347656 23.90625 8.3125 23.90625 C 17.96875 23.90625 23.25 15.90625 23.25 8.972656 C 23.25 8.742188 23.246094 8.515625 23.234375 8.289063 C 24.261719 7.554688 25.152344 6.628906 25.855469 5.574219 ">
-                  </path>
-                </svg>
-              </a>
-              <a class="footer-social-link youtube" href="#" target="_blank">
-                <span class="hidden-link-text">Youtube</span>
-                <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-                  <path class="footer-social-icon-path"
-                    d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z">
-                  </path>
-                </svg>
-              </a>
-              <a class="footer-social-link github" href="#" target="_blank">
-                <span class="hidden-link-text">Github</span>
-                <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                  <path class="footer-social-icon-path"
-                    d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z ">
-                  </path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="footer-copyright-wrapper">
-              <p class="footer-copyright-text">
-                <a class="footer-copyright-link" href="#" target="_self"> ©2024. | Designed By: Team Glitch Hunters | All
-                  rights reserved. </a>
-              </p>
-            </div>
-          </div>
-        </footer>
+          <a class="footer-social-link linkedin" href="#" target="_blank">
+            <span class="hidden-link-text">Linkedin</span>
+            <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path class="footer-social-icon-path"
+                d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z">
+              </path>
+            </svg>
+          </a>
+          <a class="footer-social-link twitter" href="#" target="_blank">
+            <span class="hidden-link-text">Twitter</span>
+            <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+              <path class="footer-social-icon-path"
+                d="M 25.855469 5.574219 C 24.914063 5.992188 23.902344 6.273438 22.839844 6.402344 C 23.921875 5.75 24.757813 4.722656 25.148438 3.496094 C 24.132813 4.097656 23.007813 4.535156 21.8125 4.769531 C 20.855469 3.75 19.492188 3.113281 17.980469 3.113281 C 15.082031 3.113281 12.730469 5.464844 12.730469 8.363281 C 12.730469 8.773438 12.777344 9.175781 12.867188 9.558594 C 8.503906 9.339844 4.636719 7.246094 2.046875 4.070313 C 1.59375 4.847656 1.335938 5.75 1.335938 6.714844 C 1.335938 8.535156 2.261719 10.140625 3.671875 11.082031 C 2.808594 11.054688 2 10.820313 1.292969 10.425781 C 1.292969 10.449219 1.292969 10.46875 1.292969 10.492188 C 1.292969 13.035156 3.101563 15.15625 5.503906 15.640625 C 5.0625 15.761719 4.601563 15.824219 4.121094 15.824219 C 3.78125 15.824219 3.453125 15.792969 3.132813 15.730469 C 3.800781 17.8125 5.738281 19.335938 8.035156 19.375 C 6.242188 20.785156 3.976563 21.621094 1.515625 21.621094 C 1.089844 21.621094 0.675781 21.597656 0.265625 21.550781 C 2.585938 23.039063 5.347656 23.90625 8.3125 23.90625 C 17.96875 23.90625 23.25 15.90625 23.25 8.972656 C 23.25 8.742188 23.246094 8.515625 23.234375 8.289063 C 24.261719 7.554688 25.152344 6.628906 25.855469 5.574219 ">
+              </path>
+            </svg>
+          </a>
+          <a class="footer-social-link youtube" href="#" target="_blank">
+            <span class="hidden-link-text">Youtube</span>
+            <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+              <path class="footer-social-icon-path"
+                d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z">
+              </path>
+            </svg>
+          </a>
+          <a class="footer-social-link github" href="#" target="_blank">
+            <span class="hidden-link-text">Github</span>
+            <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+              <path class="footer-social-icon-path"
+                d="M 16 4 C 9.371094 4 4 9.371094 4 16 C 4 21.300781 7.4375 25.800781 12.207031 27.386719 C 12.808594 27.496094 13.027344 27.128906 13.027344 26.808594 C 13.027344 26.523438 13.015625 25.769531 13.011719 24.769531 C 9.671875 25.492188 8.96875 23.160156 8.96875 23.160156 C 8.421875 21.773438 7.636719 21.402344 7.636719 21.402344 C 6.546875 20.660156 7.71875 20.675781 7.71875 20.675781 C 8.921875 20.761719 9.554688 21.910156 9.554688 21.910156 C 10.625 23.746094 12.363281 23.214844 13.046875 22.910156 C 13.15625 22.132813 13.46875 21.605469 13.808594 21.304688 C 11.144531 21.003906 8.34375 19.972656 8.34375 15.375 C 8.34375 14.0625 8.8125 12.992188 9.578125 12.152344 C 9.457031 11.851563 9.042969 10.628906 9.695313 8.976563 C 9.695313 8.976563 10.703125 8.65625 12.996094 10.207031 C 13.953125 9.941406 14.980469 9.808594 16 9.804688 C 17.019531 9.808594 18.046875 9.941406 19.003906 10.207031 C 21.296875 8.65625 22.300781 8.976563 22.300781 8.976563 C 22.957031 10.628906 22.546875 11.851563 22.421875 12.152344 C 23.191406 12.992188 23.652344 14.0625 23.652344 15.375 C 23.652344 19.984375 20.847656 20.996094 18.175781 21.296875 C 18.605469 21.664063 18.988281 22.398438 18.988281 23.515625 C 18.988281 25.121094 18.976563 26.414063 18.976563 26.808594 C 18.976563 27.128906 19.191406 27.503906 19.800781 27.386719 C 24.566406 25.796875 28 21.300781 28 16 C 28 9.371094 22.628906 4 16 4 Z ">
+              </path>
+            </svg>
+          </a>
+        </div>
       </div>
+      <div class="footer-copyright">
+        <div class="footer-copyright-wrapper">
+          <p class="footer-copyright-text">
+            <a class="footer-copyright-link" href="#" target="_self"> ©2024. | Designed By: Team Glitch Hunters | All
+              rights reserved. </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-      <script>
-        function toggleMenu() {
-            const menu = document.querySelector('.menu');
-            menu.classList.toggle('show');
-        }
-    </script>
-    </body>
+</body>
 
-    </html>
+</html>
