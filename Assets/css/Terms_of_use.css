@@ -1,3 +1,9 @@
+:root {
+  --primary-color: #ffcf1a;
+  --text-color: rgb(0, 2, 4);
+  --hover-color: #ffd700;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,23 +12,21 @@
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar {
-  height: 12%;
   display: flex;
   align-items: center;
   padding: 12px 25px;
-  align-items: center;
-  background-color: #ffcf1a;
-  position: sticky;
+  background-color: var(--primary-color);
+  position: sticky; 
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
-
 
 .logo {
   width: 80px;
@@ -32,70 +36,159 @@ body {
 }
 
 .logo-container {
-  position: relative;
   display: inline-block;
 }
 
 .logo-title {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 10%;
+  margin-bottom: 5px;
   line-height: 1;
 }
 
 .logo-subtitle {
   text-align: center;
-  position: absolute;
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  right: 0;
   font-size: 16px;
   line-height: 1;
   margin: 0;
 }
 
-.Home {
-  width: 30px;
-  cursor: pointer;
-}
-
-.Emergency {
-  width: 30px;
-  cursor: pointer;
-  margin-left: 40px;
-}
-
-.community {
-  width: 30px;
-  cursor: pointer;
-  margin-left: 40px;
-}
-
-.other {
-  width: 30px;
-  cursor: pointer;
-  margin-right: 40px;
-  margin-left: 40px;
-}
-
 nav {
   flex: 1;
   text-align: right;
-  width: 50%;
+  width: 50%; 
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-  list-style: none;
-  display: inline-block;
-
   margin-right: 40px;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: rgb(0, 2, 4);
+  color: var(--text-color);
   font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a i {
+  margin-right: 8px; 
+}
+
+.menu-toggle {
+display: block; 
+font-size: 24px;
+cursor: pointer;
+margin-left: auto;
+background: var(--hover-color); /* Background color */
+border: none;
+color: black; /* Text color */
+position: relative; /* To position the pseudo-elements */
+padding: 10px 15px; /* Add some padding */
+border-radius: 50%; /* Make it circular */
+transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.menu-toggle:hover {
+background-color: rgba(255, 207, 26, 0.6); /* Gentle hover background */
+transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.menu-toggle:focus {
+outline: none; /* Remove default outline */
+box-shadow: 0 0 5px rgba(255, 207, 26, 0.5); /* Add a subtle shadow on focus */
+}
+
+.menu-toggle i {
+transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and rotation transition */
+}
+
+.mobile-nav.show + .menu-toggle i {
+transform: rotate(90deg); /* Rotate icon when menu is open */
+}
+
+.mobile-nav {
+display: none; 
+position: absolute;
+background-color: var(--primary-color);
+top: 50px; /* Adjust to position below the navbar */
+right: -250px; /* Initially position it off-screen */
+width: 250px; /* Set a fixed width for the mobile nav */
+box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+z-index: 1000;
+transition: right 0.3s ease; /* Smooth sliding transition */
+}
+
+.mobile-nav.show {
+display: block; /* Show the mobile nav when the 'show' class is added */
+right: 0; /* Slide in from the right */
+}
+
+.mobile-nav ul {
+flex-direction: column; 
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+.mobile-nav ul li {
+width: 100%; /* Make list items take full width */
+}
+
+.mobile-nav ul li a {
+display: block; /* Make the entire area clickable */
+padding: 15px 20px; /* Add padding for a larger clickable area */
+text-align: center; /* Center the text */
+text-decoration: none; /* Remove underline */
+color: var(--text-color); /* Text color */
+font-size: 18px; /* Font size */
+transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle bottom border */
+}
+
+.mobile-nav ul li a:hover {
+background-color: var(--hover-color); /* Change background on hover */
+color: white; /* Change text color on hover */
+}
+
+.mobile-nav ul li:last-child a {
+border-bottom: none; /* Remove border from the last item */
+}
+
+@media (max-width: 768px) {
+  nav {
+      display: none; 
+  }
+
+  .menu-toggle {
+      display: block; 
+  }
+
+  .mobile-nav {
+      display: none; 
+  }
+
+  .mobile-nav.show {
+      display: block; 
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+      display: block; 
+  }
 }
 
 /* content */
