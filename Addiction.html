@@ -4,71 +4,75 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Addiction</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             <link rel="stylesheet" href="Assets/css/styles.css">
         </head>
         <body>
 
 <!--Header New-->
-            
-<!-- Header with Logo, Title, Icons, and Menu Toggle -->
-<div class="header">
-    <!-- Logo and Title -->
-    <div class="logo-container">
-        <div class="logo">
-            <img src="https://healthedpro.github.io/Health-Ed-Pro/HEPlogo.png" alt="HealthEdPro Logo">
-        </div>
-        <div>
-            <div class="title">HealthEdPro</div>
-            <div class="subtitle">Selfcare</div>
-        </div>
-    </div>
+<div class="navbar">
+  <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png" alt="Logo" class="logo">
+  <div class="logo-container">
+      <h1 class="logo-title"> HealthEdPro </h1>
+      <h2 class="logo-subtitle">Selfcare</h2>
+  </div>
 
-    <!-- Center Section (for spacing) -->
-    <div class="center-section"></div>
+  <nav>
+      <ul>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html"><i class="fas fa-exclamation-triangle"></i>Emergency</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html"><i class="fas fa-users"></i>Community</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+      </ul>
+  </nav>
 
-    <!-- Icons and Login Section -->
-    <div class="icon-section">
-        <a href="#" class="login">🎧☕️📖</a>
-        <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR4nO3WPWsUURTG8Z+xWV8LhVRK0GhhvVroNxAMGKxTZit7e0HwKwRfKrG1ErGxsFJZfKsFlVhqiIJoEHflyhGWZSaTWe/upJg/nCnO3HvuM2fOPfeSl33o2KWcxQd8wgW7jKvYwuewrfA1Tgd3MMRLnMAxPAvffRxoStwpvAkht8ZqrxO+9O4tTo+8647ZmWmIu4QN/MTqNuNW8B3fcCV8wzHr5xS2FzcwwPvIQBXdGDuIuUnUU/TwMafAo3gcCzzBfI25R/BoJGtr4e/nEnguvjZl4TrmJogxF3NTjPWImUVgL2ptI2ovZ/1u/o/AtBPvxi95jUX5WIyYKfa7SU6f43geAe5hv/x0cDvWeIWTO514EV/wC9dMn16cPF9xebuBe0LQ7zhPz5sd3ZFWdLNoE6Y28DDSvV6zheRiPtYehpak6S+Ho1CT+h+5O3tN+qFhEJoOiccDLOdsnBPyb/3l0HSwbEBT9KvWbwXOMoMLBXe7MktjZy4w3UiGO7S1JgX2KqxxgVW0AstoM1hEW4MVtLu4iLbNlNG2mSLaNlNBZYJe1LhCTcuShlKWovibtKWqNLeowR9WphA2i8ozeAAAAABJRU5ErkJggg=="
-              class="Home">
-        <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">
-          <img
-            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjklEQVR4nO2YTYhNYRjHf+MzwywojIbxFWVEU7fMrMZGTYqSfDRWY2EQpbGUDbJASbK5xWqw8ZFmwY66oSgiY7LTlBAiZHzP1aP/1e2OM/d8POfMZn711j3v+z7/8++973ne5xwIzzrgFdBIfOYDb4C1pMBKYAjIJ9DIS2MFKXEV+AEsjBHbCHwHrpAizQlWMa9Y00iVS8CTGHF9ik2dCUBdjLg6xY6ROQ3AlAR5rQ1YE9BWAdNiatcCTfbjE/Aa6FZnGDYCj4FiiFZKLU0RjHXL02/r2AD0S8xOij1VBE5o7gvgKLAN2BzQdgAXgV/AV2BLFe298lCUp02lgXFAhzotEU8PENip4F5gKuFpVpr5CbQGzJmhe/fLi3kahnXWj7D074CnMfdVA/AeuD/CnPogY2H3na3e1rgCwBFpLCMFjkt8VgKNNml0klKh8DGhxhwZPEwKPAIeJtSoAb4A50kBW73LDjp9wF2cmam/xvZhUnqVhF1pkcHdDlqnpBWnIgqkQ6LtDlr7pGWvEJGfsNPAbWBSxdgBiS51MLheWnbElmMFyz15MC//mA2cBAYVaOlkfEXwWZ2nkx0MLtd99lf0WzF7TWOD8mTe+KDOG9pr/+MmMIAPtXo3ORMw3iIvRR2Nfzd+0AFe4jlwCz9eAterzGkN+1BO1N97Dj/uAM+8xJZouQ96CQI9wLcklUs57TJohakXh6Q5z0Nsl8Sq7dModEpzNQ4ccyizgsqu7ThgXwM+48tcGbQCNjEP9AbnSY1eoi7EFVgM5NQskRfKrr3agGrM0vWCsOYWKdMXM25DYU3mFGC5qiuj1qN75qIYtMCs6BozOBorWNBn2yxaIYpBOzHejsJTbPccdlr9AROb/U7onGYSAAAAAElFTkSuQmCC"
-            class="Emergency"></a>
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAADM0lEQVR4nO2XWUhVURSGv9S0OQNtkGYQlRAq6yUoCiMooh56iSLoSSuCBilogAaKgoIUi4LIQkFsQDIpKCMwemimieaCXqK5SJosu7HlP3HUe849g90K7g+by9lrrb3/u/Zew4YEEvj/0B3IAfKAXvwjyAI2A0+BiG18B+qAYX+T3ETgvQhdB3YBK4DlQBXwTfIyYFC8yfUFngOvgUIHnenAeaAFeAwMjifBrfLcNA+6M4AfwEHiiNvATR/6tcAXoCtxgNnkJ7DHh80yeTyfOCBDm23xYbNQNhPazQ8AVgI1wAXguLJCqKDqrc12+rBZKpvRtrk5QJPmTbTfAV7q+xWwHugRlOQnoNqHfpmuRbq+zVE3A/eByUAXm+5s4J6INgIpQQheAe760L8KPLB9HwM+A8NdbNaK5IIgBM8ov1kecUM/pZlztrkPwIkYdqk6KZP0faGbyB0BkjzoJ8ljLbLtKc+UerB9AjT4JZimMlbhw+aQbNLkGUNwtwe7N4ps32hQBBZ70F0k3dO2uRdAvYdyarxeHoRgnjYx0RYLD6VrbCxc1JwbZsrTiwmITUodpgd0Qp422WibS1Y7djLGHR4pD+4LSjBHC5gq4ITD0rH/CUPqq+qzG/rLAYGO2EKFPBTNizmSHYgiO6rNVzmsa6L9luyd2jlPKNYiBVFkBZIVOdTzRxr2KmJhqmy3hSEXhqBBieRT6IgapSXzRwIjRenG3LHsKPJsyc469IHjXP6AKY3XwpAboQQaUTQ7YYN06hWVdkySbH4Uu0aPKawNkvTOqJNnzCXf4XCHLBjZdumatJL5WwJ7RXAUHVGq+j0ej5ilFj+iAr4fGOPVGBio3z7AEj0ZIi4tW5Z6xGZFfKGTI0y4V9qayNXqTvwiVe3TO631DFij9d2SfJVyprG5rN6xDWolrFAXEgTpaufNOpfUkJpq4hUmktcBb3Xs5t3dirla1DzIw6Bad7Akxn3FQ2Wx3tmtnjwl1qZFCoohImfubGcgQ3eztRNqUmAUBRzJwDydQnmIddqPG8BHdEEjIUY+MFTBFenkUWnlvVyVrCAj0/ZMHRtinfYj1+NTI4EE+JP4BR2TAbz3fmsNAAAAAElFTkSuQmCC"
-                class="community"></a>
-       <button class="menu-toggle " onclick="toggleMenu()">☰</button> 
-    </div>
-</div>
+  <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars" id="hamburger-icon"></i>
+  </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+      <ul>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/">Home</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro">Login</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/test.html">Assess Yourself</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a></li>
+          <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Review.html">Reviews</a></li>
+      </ul>
+  </div>
 
-<!-- Side Menu -->
-<nav class="side-menu" id="sideMenu">
-    <a href="#Home" class="menu-link">Home</a>
-    <a href="#about" class="menu-link">Login</a>
-    <a href="#services" class="menu-link">Assess Yourself</a>
-    <a href="#contact" class="menu-link">Emergency</a>
-    <a href="#contact" class="menu-link">Community</a>
-    <a href="#contact" class="menu-link">Blog</a>
-    <a href="#contact" class="menu-link">Reviews</a>
-    <a href="#contact" class="menu-link">About Us</a>
-</nav>
-
-<!-- Overlay for Closing Side Menu -->
-<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
 <script>
-    function toggleMenu() {
-        const sideMenu = document.getElementById("sideMenu");
-        const overlay = document.getElementById("overlay");
-        
-        sideMenu.classList.toggle("show");
-        overlay.classList.toggle("show");
-    }
-</script>
+  function toggleMenu() {
+const mobileNav = document.getElementById('mobile-nav');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+mobileNav.classList.toggle('show');
+if (mobileNav.classList.contains('show')) {
+  hamburgerIcon.classList.remove('fa-bars');
+  hamburgerIcon.classList.add('fa-times'); // Change to close icon
+} else {
+  hamburgerIcon.classList.remove('fa-times');
+  hamburgerIcon.classList.add('fa-bars'); // Change back to hamburger icon
+}
+}
 
+// Close the mobile menu when clicking outside of it
+document.addEventListener('click', function(event) {
+const mobileNav = document.getElementById('mobile-nav');
+const hamburgerButton = document.querySelector('.menu-toggle');
+
+// Check if the click was outside the mobile nav and hamburger button
+if (!mobileNav.contains(event.target) && !hamburgerButton.contains(event.target)) {
+  if (mobileNav.classList.contains('show')) {
+      mobileNav.classList.remove('show');
+      hamburgerButton.querySelector('i').classList.remove('fa-times');
+      hamburgerButton.querySelector('i').classList.add('fa-bars'); // Change back to hamburger icon
+  }
+}
+});
+</script>
 <!--Header New-->
             <!--index -->
             <!--Content Section-->
@@ -78,19 +82,18 @@
                     <p class="intro">Addiction is a complex condition, a brain disorder that is manifested by compulsive substance use despite harmful consequences. People with addiction (severe substance use disorder) often display a compulsive pattern of seeking and using substances, leading to significant impairment or distress.</p>
                 </header>
                 
-                <nav class="non1">
+                <nav class="non1 nav">
                     <h2 class="h2">Contents</h2>
-                    <ul>
-                        <li><a href="#definition">Definition</a></li>
-                        <li><a href="#Is addiction a disease?">Is addiction a disease?</a></li>
-                        <li><a href="#types">Types of Addiction</a></li>
-                        <li><a href="#Symptoms and Causes">Symptoms and Causes</a></li>
-                        <li  class="li"><a href="#What causes addiction?">What causes addiction?</a></li>
-                        <li><a href="#Management and Treatment">Management and Treatment</a></li>
-                        <li><a href="#Prevention">Prevention</a></li>
-                        <li><a href="#Outlook / Prognosis">Outlook / Prognosis</a></li>
-                        <li><a href="#Living With">How can I help someone with an addiction?</a></li>
-                        
+                    <ul class="ul">
+                        <li class="li"><a class="a"class="a"class="a"href="#definition">Definition</a></li>
+                        <li class="li"><a class="a"class="a"href="#Is addiction a disease?">Is addiction a disease?</a></li>
+                        <li class="li"><a class="a"href="#types">Types of Addiction</a></li>
+                        <li class="li"><a class="a"href="#Symptoms and Causes">Symptoms and Causes</a></li>
+                        <li  class="li"><a class="a"href="#What causes addiction?">What causes addiction?</a></li>
+                        <li class="li"><a class="a"href="#Management and Treatment">Management and Treatment</a></li>
+                        <li class="li"><a class="a"href="#Prevention">Prevention</a></li>
+                        <li class="li"><a class="a"href="#Outlook / Prognosis">Outlook / Prognosis</a></li>
+                        <li class="li"><a class="a"href="#Living With">How can I help someone with an addiction?</a></li>
                     </ul>
                 </nav>
 
@@ -117,7 +120,7 @@
 
                 <section id="types">
                     <h2 class="h2">Types of Addiction</h2>
-                    <ul class="non1">
+                    <ul class="non1 ul">
                         <p>Addiction can be broadly categorized into two types:</p>
                     <li  class="li"><strong>Substance Addiction:</strong> This includes addiction to drugs, alcohol, and other substances. <br>
                             Healthcare providers and the medical community now call substance addiction substance use disorder. The American Psychiatric Association’s Diagnostic and Statistical Manual of Mental Disorders (DSM-5) has concrete diagnostic criteria for substance use disorders. <br>
@@ -265,7 +268,7 @@
 
             <!--collapse container-->    
                 <footer>
-                    <p>For more information, visit <a href="https://www.nida.nih.gov/" target="_blank">National Institute on Drug Abuse</a>.</p>
+                    <p>For more information, visit <a class="a"href="https://www.nida.nih.gov/" target="_blank">National Institute on Drug Abuse</a>.</p>
                 </footer>
 
                  <!--Footer Section-->
@@ -281,7 +284,7 @@
                         <div class="footer-content">
                           <div class="footer-content-column">
                             <div class="footer-logo">
-                              <a class="footer-logo-link" href="#">
+                              <a class="a"class="footer-logo-link" href="#">
                                 <span class="hidden-link-text">LOGO</span>
                                 <img src="https://healthedpro.github.io/Health-Ed-Pro/HEPlogo.png"
                                   alt="Logo" class="footer-logo">
@@ -291,13 +294,13 @@
                               <h2 class="footer-menu-name"> Activities</h2>
                               <ul id="menu-get-started" class="footer-menu-list">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                                  <a href="#">Welfares</a>
+                                  <a class="a"href="#">Welfares</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                                  <a href="#">Collaborations</a>
+                                  <a class="a"href="#">Collaborations</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-product">
-                                  <a href="#">Seminars</a>
+                                  <a class="a"href="#">Seminars</a>
                                 </li>
                               </ul>
                             </div>
@@ -307,23 +310,23 @@
                               <h2 class="footer-menu-name"> Helpline No</h2>
                               <ul id="menu-company" class="footer-menu-list">
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                                  <p class="footer-call-to-action-link-wrapper"> <a class="a"class="footer-call-to-action-link"
                                       href="tel:1800-599-0019" target="_self"> 1800-599-0019 </a></p>
                                 </li>
                                 <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                                  <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                                  <p class="footer-call-to-action-link-wrapper"> <a class="a"class="footer-call-to-action-link"
                                       href="tel:0124-64XXXX" target="_self"> 1-8008914416 </a></p>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                                  <p class="footer-call-to-action-link-wrapper"> <a class="a"class="footer-call-to-action-link"
                                       href="tel:0124-64XXXX" target="_self"> 8376804102 </a></p>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <p class="footer-call-to-action-link-wrapper"> 9630899002 <a class="footer-call-to-action-link"
+                                  <p class="footer-call-to-action-link-wrapper"> 9630899002 <a class="a"class="footer-call-to-action-link"
                                       href="tel:0124-64XXXX" target="_self"> </a></p>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link"
+                                  <p class="footer-call-to-action-link-wrapper"> <a class="a"class="footer-call-to-action-link"
                                       href="tel:0124-64XXXX" target="_self"> 8322252525 </a></p>
                                 </li>
               
@@ -334,10 +337,10 @@
                               <ul id="menu-legal" class="footer-menu-list">
                                 <li
                                   class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-170434">
-                                  <a href="#">Privacy Policy</a>
+                                  <a class="a"href="#">Privacy Policy</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <a href="#">Terms of Use</a>
+                                  <a class="a"href="#">Terms of Use</a>
                                 </li>
                               </ul>
                             </div>
@@ -347,22 +350,22 @@
                               <h2 class="footer-menu-name"> Quick Links</h2>
                               <ul id="menu-quick-links" class="footer-menu-list">
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a target="_blank" rel="noopener noreferrer" href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a>
+                                  <a class="a"target="_blank" rel="noopener noreferrer" href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a>
                                 </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                                  <a target="_blank" rel="noopener noreferrer" href="#">Assess yourself</a>
+                                  <a class="a"target="_blank" rel="noopener noreferrer" href="#">Assess yourself</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a>
+                                  <a class="a"href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a>
+                                  <a class="a"href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type_archive menu-item-object-customer">
-                                  <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a>
+                                  <a class="a"href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a>
                                 </li>
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                                  <a href="#">Reviews</a>
+                                  <a class="a"href="#">Reviews</a>
                                 </li>
                               </ul>
                             </div>
@@ -371,11 +374,11 @@
                             <div class="footer-call-to-action">
                               <h2 class="footer-call-to-action-title"> Let's Chat</h2>
                               <p class="footer-call-to-action-description"> Have a support question?</p>
-                              <a class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
+                              <a class="a"class="footer-call-to-action-button button" href="#" target="_self"> Get in Touch </a>
                             </div>
                             <div class="footer-call-to-action">
                               <h2 class="footer-call-to-action-title"> You Call Us</h2>
-                              <p class="footer-call-to-action-link-wrapper"> <a class="footer-call-to-action-link" href="tel:0124-64XXXX"
+                              <p class="footer-call-to-action-link-wrapper"> <a class="a"class="footer-call-to-action-link" href="tel:0124-64XXXX"
                                   target="_self"> 0124-64XXXX </a></p>
                             </div>
                           </div>
@@ -385,7 +388,7 @@
                                 d="M223.06,43.32c-.77-7.2,1.87-28.47-20-32.53C187.78,8,180.41,18,178.32,20.7s-5.63,10.1-4.07,16.7-.13,15.23-4.06,15.91-8.75-2.9-6.89-7S167.41,36,167.15,33a18.93,18.93,0,0,0-2.64-8.53c-3.44-5.5-8-11.19-19.12-11.19a21.64,21.64,0,0,0-18.31,9.18c-2.08,2.7-5.66,9.6-4.07,16.69s.64,14.32-6.11,13.9S108.35,46.5,112,36.54s-1.89-21.24-4-23.94S96.34,0,85.23,0,57.46,8.84,56.49,24.56s6.92,20.79,7,24.59c.07,2.75-6.43,4.16-12.92,2.38s-4-10.75-3.46-12.38c1.85-6.6-2-14-4.08-16.69a21.62,21.62,0,0,0-18.3-9.18C13.62,13.28,9.06,19,5.62,24.47A18.81,18.81,0,0,0,3,33a21.85,21.85,0,0,0,1.58,9.08,16.58,16.58,0,0,1,1.06,5A6.75,6.75,0,0,1,0,54H236C235.47,54,223.83,50.52,223.06,43.32Z">
                               </path>
                             </svg>
-                            <a class="footer-social-link linkedin" href="#" target="_blank">
+                            <a class="a"class="footer-social-link linkedin" href="#" target="_blank">
                               <span class="hidden-link-text">Linkedin</span>
                               <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                                 <path class="footer-social-icon-path"
@@ -393,7 +396,7 @@
                                 </path>
                               </svg>
                             </a>
-                            <a class="footer-social-link twitter" href="#" target="_blank">
+                            <a class="a"class="footer-social-link twitter" href="#" target="_blank">
                               <span class="hidden-link-text">Twitter</span>
                               <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
                                 <path class="footer-social-icon-path"
@@ -401,7 +404,7 @@
                                 </path>
                               </svg>
                             </a>
-                            <a class="footer-social-link youtube" href="#" target="_blank">
+                            <a class="a"class="footer-social-link youtube" href="#" target="_blank">
                               <span class="hidden-link-text">Youtube</span>
                               <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
                                 <path class="footer-social-icon-path"
@@ -409,7 +412,7 @@
                                 </path>
                               </svg>
                             </a>
-                            <a class="footer-social-link github" href="#" target="_blank">
+                            <a class="a"class="footer-social-link github" href="#" target="_blank">
                               <span class="hidden-link-text">Github</span>
                               <svg class="footer-social-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                 <path class="footer-social-icon-path"
@@ -422,7 +425,7 @@
                         <div class="footer-copyright">
                           <div class="footer-copyright-wrapper">
                             <p class="footer-copyright-text">
-                              <a class="footer-copyright-link" href="#" target="_self"> ©2024. | Designed By: Team Glitch Hunters | All
+                              <a class="a"class="footer-copyright-link" href="#" target="_self"> ©2024. | Designed By: Team Glitch Hunters | All
                                 rights reserved. </a>
                             </p>
                           </div>

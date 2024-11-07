@@ -4,72 +4,76 @@
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title>Anxiety</title>
-    
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
                 <link rel="stylesheet" href="Assets/css/styles.css">
             </head>
             <body>
 
     <!--Header New-->
                 
-    <!-- Header with Logo, Title, Icons, and Menu Toggle -->
-    <div class="header">
-        <!-- Logo and Title -->
+  
+    <div class="navbar">
+        <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png" alt="Logo" class="logo">
         <div class="logo-container">
-            <div class="logo">
-                <img src="https://healthedpro.github.io/Health-Ed-Pro/HEPlogo.png" alt="HealthEdPro Logo">
-            </div>
-            <div>
-                <div class="title">HealthEdPro</div>
-                <div class="subtitle">Selfcare</div>
-            </div>
+            <h1 class="logo-title"> HealthEdPro </h1>
+            <h2 class="logo-subtitle">Selfcare</h2>
         </div>
 
-        <!-- Center Section (for spacing) -->
-        <div class="center-section"></div>
+        <nav>
+            <ul>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html"><i class="fas fa-exclamation-triangle"></i>Emergency</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html"><i class="fas fa-users"></i>Community</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+            </ul>
+        </nav>
 
-        <!-- Icons and Login Section -->
-        <div class="icon-section">
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html" class="login">🎧☕️📖</a>
-        <a href="https://healthedpro.github.io/Health-Ed-Pro/index.html"> <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR4nO3WPWsUURTG8Z+xWV8LhVRK0GhhvVroNxAMGKxTZit7e0HwKwRfKrG1ErGxsFJZfKsFlVhqiIJoEHflyhGWZSaTWe/upJg/nCnO3HvuM2fOPfeSl33o2KWcxQd8wgW7jKvYwuewrfA1Tgd3MMRLnMAxPAvffRxoStwpvAkht8ZqrxO+9O4tTo+8647ZmWmIu4QN/MTqNuNW8B3fcCV8wzHr5xS2FzcwwPvIQBXdGDuIuUnUU/TwMafAo3gcCzzBfI25R/BoJGtr4e/nEnguvjZl4TrmJogxF3NTjPWImUVgL2ptI2ovZ/1u/o/AtBPvxi95jUX5WIyYKfa7SU6f43geAe5hv/x0cDvWeIWTO514EV/wC9dMn16cPF9xebuBe0LQ7zhPz5sd3ZFWdLNoE6Y28DDSvV6zheRiPtYehpak6S+Ho1CT+h+5O3tN+qFhEJoOiccDLOdsnBPyb/3l0HSwbEBT9KvWbwXOMoMLBXe7MktjZy4w3UiGO7S1JgX2KqxxgVW0AstoM1hEW4MVtLu4iLbNlNG2mSLaNlNBZYJe1LhCTcuShlKWovibtKWqNLeowR9WphA2i8ozeAAAAABJRU5ErkJggg=="
-                class="Home"> 
-            </a>
-            <a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">
-            <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAACjklEQVR4nO2YTYhNYRjHf+MzwywojIbxFWVEU7fMrMZGTYqSfDRWY2EQpbGUDbJASbK5xWqw8ZFmwY66oSgiY7LTlBAiZHzP1aP/1e2OM/d8POfMZn711j3v+z7/8++973ne5xwIzzrgFdBIfOYDb4C1pMBKYAjIJ9DIS2MFKXEV+AEsjBHbCHwHrpAizQlWMa9Y00iVS8CTGHF9ik2dCUBdjLg6xY6ROQ3AlAR5rQ1YE9BWAdNiatcCTfbjE/Aa6FZnGDYCj4FiiFZKLU0RjHXL02/r2AD0S8xOij1VBE5o7gvgKLAN2BzQdgAXgV/AV2BLFe298lCUp02lgXFAhzotEU8PENip4F5gKuFpVpr5CbQGzJmhe/fLi3kahnXWj7D074CnMfdVA/AeuD/CnPogY2H3na3e1rgCwBFpLCMFjkt8VgKNNml0klKh8DGhxhwZPEwKPAIeJtSoAb4A50kBW73LDjp9wF2cmam/xvZhUnqVhF1pkcHdDlqnpBWnIgqkQ6LtDlr7pGWvEJGfsNPAbWBSxdgBiS51MLheWnbElmMFyz15MC//mA2cBAYVaOlkfEXwWZ2nkx0MLtd99lf0WzF7TWOD8mTe+KDOG9pr/+MmMIAPtXo3ORMw3iIvRR2Nfzd+0AFe4jlwCz9eAterzGkN+1BO1N97Dj/uAM+8xJZouQ96CQI9wLcklUs57TJohakXh6Q5z0Nsl8Sq7dModEpzNQ4ccyizgsqu7ThgXwM+48tcGbQCNjEP9AbnSY1eoi7EFVgM5NQskRfKrr3agGrM0vWCsOYWKdMXM25DYU3mFGC5qiuj1qN75qIYtMCs6BozOBorWNBn2yxaIYpBOzHejsJTbPccdlr9AROb/U7onGYSAAAAAElFTkSuQmCC"
-                class="Emergency"></a>
-                <a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">
-                <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAADM0lEQVR4nO2XWUhVURSGv9S0OQNtkGYQlRAq6yUoCiMooh56iSLoSSuCBilogAaKgoIUi4LIQkFsQDIpKCMwemimieaCXqK5SJosu7HlP3HUe849g90K7g+by9lrrb3/u/Zew4YEEvj/0B3IAfKAXvwjyAI2A0+BiG18B+qAYX+T3ETgvQhdB3YBK4DlQBXwTfIyYFC8yfUFngOvgUIHnenAeaAFeAwMjifBrfLcNA+6M4AfwEHiiNvATR/6tcAXoCtxgNnkJ7DHh80yeTyfOCBDm23xYbNQNhPazQ8AVgI1wAXguLJCqKDqrc12+rBZKpvRtrk5QJPmTbTfAV7q+xWwHugRlOQnoNqHfpmuRbq+zVE3A/eByUAXm+5s4J6INgIpQQheAe760L8KPLB9HwM+A8NdbNaK5IIgBM8ov1kecUM/pZlztrkPwIkYdqk6KZP0faGbyB0BkjzoJ8ljLbLtKc+UerB9AjT4JZimMlbhw+aQbNLkGUNwtwe7N4ps32hQBBZ70F0k3dO2uRdAvYdyarxeHoRgnjYx0RYLD6VrbCxc1JwbZsrTiwmITUodpgd0Qp422WibS1Y7djLGHR4pD+4LSjBHC5gq4ITD0rH/CUPqq+qzG/rLAYGO2EKFPBTNizmSHYgiO6rNVzmsa6L9luyd2jlPKNYiBVFkBZIVOdTzRxr2KmJhqmy3hSEXhqBBieRT6IgapSXzRwIjRenG3LHsKPJsyc469IHjXP6AKY3XwpAboQQaUTQ7YYN06hWVdkySbH4Uu0aPKawNkvTOqJNnzCXf4XCHLBjZdumatJL5WwJ7RXAUHVGq+j0ej5ilFj+iAr4fGOPVGBio3z7AEj0ZIi4tW5Z6xGZFfKGTI0y4V9qayNXqTvwiVe3TO631DFij9d2SfJVyprG5rN6xDWolrFAXEgTpaufNOpfUkJpq4hUmktcBb3Xs5t3dirla1DzIw6Bad7Akxn3FQ2Wx3tmtnjwl1qZFCoohImfubGcgQ3eztRNqUmAUBRzJwDydQnmIddqPG8BHdEEjIUY+MFTBFenkUWnlvVyVrCAj0/ZMHRtinfYj1+NTI4EE+JP4BR2TAbz3fmsNAAAAAElFTkSuQmCC"
-                    class="community"></a>
-        <button class="menu-toggle " onclick="toggleMenu()">☰</button> 
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars" id="hamburger-icon"></i>
+        </button>
         </div>
-    </div>
-
-    <!-- Side Menu -->
-    <nav class="side-menu" id="sideMenu">
-        <a href="#Home" class="menu-link">Home</a>
-        <a href="#about" class="menu-link">Login</a>
-        <a href="#contact" class="menu-link">Emergency</a>
-        <a href="#services" class="menu-link">Assess Yourself</a>
-        <a href="#contact" class="menu-link">Library</a>
-        <a href="#contact" class="menu-link">Community</a>
-        <a href="#contact" class="menu-link">Blog</a>
-        <a href="#contact" class="menu-link">Reviews</a>
-        <a href="#contact" class="menu-link">About Us</a>
-    </nav>
-
-    <!-- Overlay for Closing Side Menu -->
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/">Home</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro">Login</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/test.html">Assess Yourself</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Review.html">Reviews</a></li>
+            </ul>
+        </div>
+    
 
     <script>
         function toggleMenu() {
-            const sideMenu = document.getElementById("sideMenu");
-            const overlay = document.getElementById("overlay");
-            
-            sideMenu.classList.toggle("show");
-            overlay.classList.toggle("show");
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    mobileNav.classList.toggle('show');
+    if (mobileNav.classList.contains('show')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times'); // Change to close icon
+    } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars'); // Change back to hamburger icon
+    }
+}
+
+// Close the mobile menu when clicking outside of it
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerButton = document.querySelector('.menu-toggle');
+
+    // Check if the click was outside the mobile nav and hamburger button
+    if (!mobileNav.contains(event.target) && !hamburgerButton.contains(event.target)) {
+        if (mobileNav.classList.contains('show')) {
+            mobileNav.classList.remove('show');
+            hamburgerButton.querySelector('i').classList.remove('fa-times');
+            hamburgerButton.querySelector('i').classList.add('fa-bars'); // Change back to hamburger icon
         }
+    }
+});
     </script>
                 <!--Content Section-->
                 <div class="container">
@@ -78,20 +82,20 @@
                         <p class="intro">Anxiety is a feeling of fear, dread, or uneasiness that can be a normal reaction to stress. It can also be a symptom of an anxiety disorder, which is a condition where a person experiences excessive worry and fear. Stress can be defined as a state of worry or mental tension caused by a difficult situation. Stress is a natural human response that prompts us to address challenges and threats in our lives. Everyone experiences stress to some degree.</p>
                     </header>
                     
-                    <nav>
+                    <nav class="nav">
                         <h2 class="h2">Contents</h2>
-                        <ul>
-                            <li><a href="#What is anxiety?">What is anxiety?</a></li>
-                            <li><a href="#Symptoms of anxiety">Symptoms of anxiety</a></li>
-                            <li><a href="#types">Types of anxiety</a></li>
-                            <li><a href="#Causes of anxiety">Causes of anxiety</a></li>
-                            <li><a href="#Treatment for anxiety">Treatment for anxiety</a></li>
-                            <li><a href="#Preventing anxiety">Preventing anxiety</a></li>
-                            <li><a href="#Symptoms and Causes of Stress">Symptoms and Causes of Stress</a></li>
-                            <li><a href="#What causes stress?">What causes stress?</a></li>
-                            <li><a href="#Management and Treatment">Management and Treatment</a></li>
-                            <li><a href="#Prevention">Prevention Stress</a></li>
-                            <li><a href="#A note from Health Ed Pro">A note from Health Ed Pro</a></li>
+                        <ul class="ul">
+                            <li class="li"><a class="a" href="#What is anxiety?">What is anxiety?</a></li>
+                            <li class="li"><a class="a" href="#Symptoms of anxiety">Symptoms of anxiety</a></li>
+                            <li class="li"><a class="a" href="#types">Types of anxiety</a></li>
+                            <li class="li"><a class="a" href="#Causes of anxiety">Causes of anxiety</a></li>
+                            <li class="li"><a class="a" href="#Treatment for anxiety">Treatment for anxiety</a></li>
+                            <li class="li"><a class="a" href="#Preventing anxiety">Preventing anxiety</a></li>
+                            <li class="li"><a class="a" href="#Symptoms and Causes of Stress">Symptoms and Causes of Stress</a></li>
+                            <li class="li"><a class="a" href="#What causes stress?">What causes stress?</a></li>
+                            <li class="li"><a class="a" href="#Management and Treatment">Management and Treatment</a></li>
+                            <li class="li"><a class="a" href="#Prevention">Prevention Stress</a></li>
+                            <li class="li"><a class="a" href="#A note from Health Ed Pro">A note from Health Ed Pro</a></li>
                             
                         </ul>
                     </nav>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HealthEdPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #ffcf1a;
+            --text-color: rgb(0, 2, 4);
+            --hover-color: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            background-color: var(--primary-color);
+            position: sticky; 
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            width: 80px;
+            cursor: pointer;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .logo-container {
+            display: inline-block;
+        }
+
+        .logo-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            text-align: center;
+            font-size: 16px;
+            line-height: 1;
+            margin: 0;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+            width: 50%; 
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-right: 40px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li a i {
+            margin-right: 8px; 
+        }
+
+        .menu-toggle {
+    display: block; 
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    background: var(--hover-color); /* Background color */
+    border: none;
+    color: black; /* Text color */
+    position: relative; /* To position the pseudo-elements */
+    padding: 10px 15px; /* Add some padding */
+    border-radius: 50%; /* Make it circular */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 207, 26, 0.6); /* Gentle hover background */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.menu-toggle:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(255, 207, 26, 0.5); /* Add a subtle shadow on focus */
+}
+
+.menu-toggle i {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and rotation transition */
+}
+
+.mobile-nav.show + .menu-toggle i {
+    transform: rotate(90deg); /* Rotate icon when menu is open */
+}
+
+.mobile-nav {
+    display: none; 
+    position: absolute;
+    background-color: var(--primary-color);
+    top: 50px; /* Adjust to position below the navbar */
+    right: -250px; /* Initially position it off-screen */
+    width: 250px; /* Set a fixed width for the mobile nav */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease; /* Smooth sliding transition */
+}
+
+.mobile-nav.show {
+    display: block; /* Show the mobile nav when the 'show' class is added */
+    right: 0; /* Slide in from the right */
+}
+
+.mobile-nav ul {
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mobile-nav ul li {
+    width: 100%; /* Make list items take full width */
+}
+
+.mobile-nav ul li a {
+    display: block; /* Make the entire area clickable */
+    padding: 15px 20px; /* Add padding for a larger clickable area */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    color: var(--text-color); /* Text color */
+    font-size: 18px; /* Font size */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Subtle bottom border */
+}
+
+.mobile-nav ul li a:hover {
+    background-color: var(--hover-color); /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.mobile-nav ul li:last-child a {
+    border-bottom: none; /* Remove border from the last item */
+}
+
+        @media (max-width: 768px) {
+            nav {
+                display: none; 
+            }
+
+            .menu-toggle {
+                display: block; 
+            }
+
+            .mobile-nav {
+                display: none; 
+            }
+
+            .mobile-nav.show {
+                display: block; 
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-toggle {
+                display: block; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="https://healthedpro.github.io/Health-Ed-Pro/Assets/IMAGES/HEPlogo.png" alt="Logo" class="logo">
+        <div class="logo-container">
+            <h1 class="logo-title"> HealthEdPro </h1>
+            <h2 class="logo-subtitle">Selfcare</h2>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html"><i class="fas fa-exclamation-triangle"></i>Emergency</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html"><i class="fas fa-users"></i>Community</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro.html"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars" id="hamburger-icon"></i>
+        </button>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/">Home</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Signup_Form_Health_Ed_Pro">Login</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/test.html">Assess Yourself</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Emergency.html">Emergency</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Library.html">Library</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Community_Page.html">Community</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Blog_Page.html">Blog</a></li>
+                <li><a href="https://healthedpro.github.io/Health-Ed-Pro/Review.html">Reviews</a></li>
+            </ul>
+        </div>
+    
+
+    <script>
+        function toggleMenu() {
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    mobileNav.classList.toggle('show');
+    if (mobileNav.classList.contains('show')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times'); // Change to close icon
+    } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars'); // Change back to hamburger icon
+    }
+}
+
+// Close the mobile menu when clicking outside of it
+document.addEventListener('click', function(event) {
+    const mobileNav = document.getElementById('mobile-nav');
+    const hamburgerButton = document.querySelector('.menu-toggle');
+
+    // Check if the click was outside the mobile nav and hamburger button
+    if (!mobileNav.contains(event.target) && !hamburgerButton.contains(event.target)) {
+        if (mobileNav.classList.contains('show')) {
+            mobileNav.classList.remove('show');
+            hamburgerButton.querySelector('i').classList.remove('fa-times');
+            hamburgerButton.querySelector('i').classList.add('fa-bars'); // Change back to hamburger icon
+        }
+    }
+});
+    </script>
+</body>
+
+</html>
