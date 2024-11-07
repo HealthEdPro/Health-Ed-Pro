@@ -1,0 +1,283 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfbcf;
+}
+
+header {
+    background-color: #e0f7fa;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:  #fcdb6d;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* .logo {
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #854f6c;
+    font-weight: 600;
+}
+
+.nav-button {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+} */
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #854f6c;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #854f6c;
+    margin: 20px 0 10px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #854f6c;
+    margin: 15px 0 10px;
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step div {
+    text-align: center ;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #854f6c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #854f6c;
+    margin: 0 10px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+.note {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Increased gap for better spacing */
+    margin-bottom: 30px;
+}
+
+.option-button {
+    background-color: #ffffff;
+    border: 2px solid #854f6c;
+    color: #854f6c;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-button:hover {
+    background-color: #854f6c;
+    color: white;
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+.option-button.selected {
+    background-color: #854f6c; /* Change color when selected */
+    color: white; /* Change text color when selected */
+    border: 2px solid #592B45; /* Darker border when selected */
+}
+
+.submit-button {
+    background-color: #854f6c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+    background-color: #592B45; /* Darker background on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+.read-more-button {
+    background-color: #854f6c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.a {
+    color: white;
+}
+.read-more-button:hover {
+    background-color: #592B45; /* Darker background on hover */
+    transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+.optional-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.optional-input:focus {
+    border-color: #854f6c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.optional-questions {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fbe4d8; /* Light background for optional questions */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.optional-questions h2 {
+    font-size: 26px;
+    color: #854f6c;
+    margin-bottom: 15px;
+}
+
+.optional-questions p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.optional-questions .question {
+    font-size: 18px;
+    color: #854f6c;
+    margin-bottom: 10px;
+}
+
+.optional-questions .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjusted gap for spacing */
+}
+
+.optional-questions .option-button {
+    background-color: #ffffff;
+    border: 2px solid #854f6c;
+    color: #854f6c;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0 , 0.1);
+}
+
+.optional-questions .option-button:hover {
+    background-color: #854f6c;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.optional-questions .option-button.selected {
+    background-color: #854f6c; /* Change color when selected */
+    color: white; /* Change text color when selected */
+    border: 2px solid #004080; /* Darker border when selected */
+}
+
+.optional-questions .optional-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px; /* Adjusted margin for spacing */
+}
+
+.optional-questions .optional-input:focus {
+    border-color: #854f6c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
