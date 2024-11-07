@@ -275,8 +275,8 @@ p {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--starbucks-light);
-  color: white;
+  background-color:  #00704a;
+ color: white;
   text-decoration: none;
   font-weight: 500;
 }
@@ -286,7 +286,7 @@ p {
 
 /* Footer styles */
 footer {
-  background-color: var(--starbucks-dark);
+  background-color: #036635;
   color: white;
 }
 
@@ -387,7 +387,7 @@ padding: 20px;
   }
 
   
-  .card a:hover {
+  .card .a:hover {
       background-color: #057b34;
   }
 
@@ -719,10 +719,7 @@ padding: 20px;
   border-radius: 50%;
 }
 
-  a {
-color: #fff;
-text-decoration: none;
-}
+
 
 
 
